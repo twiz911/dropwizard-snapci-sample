@@ -14,7 +14,7 @@ public class MicroBlogConfiguration extends Configuration {
 
     @Valid
     @NotNull
-    private DatabaseConfiguration database = MicroBlogDatabaseConfiguration.create(System.getenv("SNAP_DB_PG_JDBC_URL"));
+    private DatabaseConfiguration database = MicroBlogDatabaseConfiguration.create(System.getenv("SNAP_DB_PG_URL"));
 
     public DatabaseConfiguration getDatabaseConfiguration() {
         return database;
