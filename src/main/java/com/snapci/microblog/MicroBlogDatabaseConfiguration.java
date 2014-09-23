@@ -17,6 +17,9 @@ public class MicroBlogDatabaseConfiguration {
         }
         DatabaseConfiguration databaseConfiguration = null;
         try {
+            
+System.err.println(databaseUrl);
+            
             URI dbUri = new URI(databaseUrl);
             String user = dbUri.getUserInfo().split(":")[0];
             String password = dbUri.getUserInfo().split(":")[1];
