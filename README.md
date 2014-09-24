@@ -79,7 +79,13 @@ That's all there's to it. We've setup a complete deployment pipeline for our Dro
 
 ## Running
 
-POST to http://desolate-tundra-4484.herokuapp.com/users using x-www-form-urlencoded name=james
+POST http://desolate-tundra-4484.herokuapp.com/users using x-www-form-urlencoded name=james
+
+GET http://desolate-tundra-4484.herokuapp.com/users/james
+
+POST http://desolate-tundra-4484.herokuapp.com/james/blog content=hello I am a human
+
+GET http://desolate-tundra-4484.herokuapp.com/james/blog
 
 
 ## Monitoring
