@@ -75,7 +75,7 @@ heroku config:add SNAP_DB_PG_URL=postgres://oddrkmxomnmbaa:hditU2uWnkV-_-5r0IwMU
 git push --force 'git@heroku.com:desolate-tundra-4484.git' 'master:master'
 ```
 
-That's all there's to it. We've setup a complete deployment pipeline for our Dropwizard service. Snap will track all subsequent commits to this repository and deploy all green builds to Heroku automatically.
+That's all there's to it. We've setup a complete deployment pipeline for our Dropwizard service. Snap will track all subsequent commits to this repository and deploy all green builds to Heroku automatically!
 
 ## Running
 
