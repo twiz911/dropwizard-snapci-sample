@@ -79,6 +79,7 @@ That's all there's to it. We've setup a complete deployment pipeline for our Dro
 
 ## Running
 
+POST to http://desolate-tundra-4484.herokuapp.com/users using x-www-form-urlencoded name=james
 
 
 ## Monitoring
