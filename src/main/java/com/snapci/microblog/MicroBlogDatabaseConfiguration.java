@@ -15,6 +15,9 @@ public class MicroBlogDatabaseConfiguration {
             throw new IllegalArgumentException("The DATABASE_URL environment variable must be set before running the app " +
                     "example: DATABASE_URL=\"postgres://sahilm:sahilm@localhost:5432/microblog\"");
         }
+        
+        logger.ERROR("databaseUrl=" + databaseUrl);
+        
         DatabaseConfiguration databaseConfiguration = null;
         try {
             URI dbUri = new URI(databaseUrl);
