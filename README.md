@@ -69,12 +69,22 @@ To setup the stage:
 - Create a new stage by click on Add new stage.
 - Select Custom Heroku deployment. If this your first time deploying to Heroku using Snap you will be asked to login via Heroku.
 - Create an Heroku app with a PostSQL database and enter the app name and connection settings in the custom Heroku commands (remove the pre-filled maintenance-mode command line)
-- git push --force 'git@heroku.com:desolate-tundra-4484.git' 'master:master'
 ```
 heroku apps | grep '^desolate-tundra-4484\b' || heroku create --no-remote 'desolate-tundra-4484' --stack 'cedar'
 heroku config:add SNAP_DB_PG_URL=postgres://oddrkmxomnmbaa:hditU2uWnkV-_-5r0IwMU6gcwh@ec2-54-225-101-202.compute-1.amazonaws.com:5432/d7bg71t0go4imr --app 'desolate-tundra-4484'
+git push --force 'git@heroku.com:desolate-tundra-4484.git' 'master:master'
 ```
 
-That's all there's to it. We've setup a complete deployment pipeline for our Dropwizard service. Snap will track all subsequent commits to this repository and deploy all green builds to Heroku.
+That's all there's to it. We've setup a complete deployment pipeline for our Dropwizard service. Snap will track all subsequent commits to this repository and deploy all green builds to Heroku automatically.
 
-)
+## Running
+
+
+
+## Monitoring
+
+Via the Heroku commandline console:
+
+```
+heroku logs --app desolate-tundra-4484
+```
