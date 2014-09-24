@@ -16,7 +16,7 @@ public class MicroBlogDatabaseConfiguration {
                     "example: DATABASE_URL=\"postgres://sahilm:sahilm@localhost:5432/microblog\"");
         }
         
-        logger.ERROR("databaseUrl=" + databaseUrl);
+        logger.error("databaseUrl=" + databaseUrl);
         
         DatabaseConfiguration databaseConfiguration = null;
         try {
