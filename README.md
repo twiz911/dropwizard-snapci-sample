@@ -62,7 +62,7 @@ The `target` directory already contains our build artifact which was propagated 
 
 ## The final stage - deploying to Heroku
 
-Deploying to Heroku is the easiest part. All we need to ensure is that the `web` task in our [Procfile](https://github.com/sahilm/dropwizard-snapci-sample/blob/master/Procfile) runs our database migrations and starts up Jetty. Here's how it looks:
+Deploying to Heroku is the easiest part. All we need to ensure is that the `web` task in our [Procfile](https://github.com/sahilm/dropwizard-snapci-sample/blob/master/Procfile) file in the root of the project runs our database migrations and starts up Jetty. Here's how it looks:
 `web: java $JAVA_OPTS -jar target/microblog*.jar db migrate microblog.yml && java $JAVA_OPTS -Ddw.http.port=$PORT -Ddw.http.adminPort=$PORT -jar target/microblog*.jar server microblog.yml`
 
 To setup the stage:
